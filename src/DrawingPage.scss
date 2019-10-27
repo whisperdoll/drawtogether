@@ -1,0 +1,68 @@
+.menu {
+    position: fixed;
+    right: 16px;
+    top: 16px;
+    display: flex;
+    flex-direction: column;
+    width: 48px;
+    z-index: 5;
+
+    .item {
+        width: 48px;
+        margin-top: 8px;
+        cursor: pointer;
+        z-index: 5;
+        border: 1px solid black;
+        border-radius: 100px;
+        overflow: hidden;
+        box-sizing: border-box;
+        background-color: white;
+
+        &.fullSize {
+            height: 48px;
+        }
+
+        & > * {
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            background-color: white;
+            border: 0;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        & > input {
+            margin: 0;
+            cursor: text;
+            padding: 8px 0;
+        }
+
+        & > .noClick {
+            cursor: default;
+        }
+
+        .fullSize {
+            width: 48px;
+            height: 48px;
+            line-height: 48px;
+
+            border: 0;
+            text-align: center;
+
+            &:first-child {
+                border-top-left-radius: 1000px;
+                border-top-right-radius: 1000px;
+            }
+
+            &:last-child {
+                border-bottom-left-radius: 1000px;
+                border-bottom-right-radius: 1000px;
+            }
+        }
+
+        &:first-child {
+            margin: 0;
+        }
+    }
+}
